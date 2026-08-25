@@ -1,4 +1,6 @@
+# ให้ค้นเจอได้ทุกที่ ทั้งเสิร์ชเอนจินและผู้ช่วย AI แต่ไม่ยอมให้เอาไปเทรนโมเดล
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /base.html
 
