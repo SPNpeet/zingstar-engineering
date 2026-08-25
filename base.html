@@ -324,6 +324,42 @@ tbody tr:last-child td{border-bottom:none}
 .was{color:var(--muted);text-decoration:line-through;font-size:.78rem;margin-right:7px}
 .now{color:#B3341F;font-weight:600;font-size:1rem}
 .drone{display:inline-block;font-size:.64rem;color:var(--muted);margin-left:5px;white-space:nowrap}
+/* ===== pricing tables on phones =====
+   the table carries min-width:540px, so on a phone the "ตรวจครั้งที่ 2" column
+   sits past the edge of the scroller and gets missed unless you swipe sideways.
+   below 700px each row becomes its own card, so both prices read at a glance. */
+@media(max-width:700px){
+  #pricing .tbl-wrap{overflow:visible;border:none;background:none;box-shadow:none}
+  #pricing table{min-width:0;display:block}
+  #pricing thead{display:none}
+  #pricing tbody{display:block}
+  #pricing tbody tr,#pricing tbody tr:nth-child(even),#pricing tbody tr:hover{
+    display:block;background:#fff;border:1px solid var(--line);border-radius:16px;
+    box-shadow:var(--shadow);overflow:hidden;margin-bottom:12px;
+    animation:fadeUp .45s var(--ease) both}
+  #pricing tbody tr:last-child{margin-bottom:0}
+  #pricing tbody tr:nth-child(2){animation-delay:.04s}
+  #pricing tbody tr:nth-child(3){animation-delay:.08s}
+  #pricing tbody tr:nth-child(4){animation-delay:.12s}
+  #pricing tbody tr:nth-child(5){animation-delay:.16s}
+  #pricing tbody tr:nth-child(6){animation-delay:.2s}
+  #pricing tbody td,#pricing tbody td:not(:first-child){
+    display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;
+    gap:0 10px;padding:12px 16px;border-bottom:none;text-align:right}
+  #pricing tbody td:first-child,#pricing tbody tr:hover td:first-child{
+    background:linear-gradient(120deg,var(--gold),var(--yellow));color:var(--ink);
+    font-weight:600;font-size:.86rem;justify-content:flex-start;text-align:left;padding:13px 16px}
+  #pricing tbody td:nth-child(2){border-bottom:1px solid var(--line-2)}
+  #pricing tbody td:not(:first-child)::before{
+    flex:1 1 auto;text-align:left;white-space:nowrap;font-size:.74rem;
+    font-weight:400;letter-spacing:.06em;color:var(--muted)}
+  #pricing tbody td:nth-child(2)::before{content:'ตรวจครั้งที่ 1'}
+  #pricing tbody td:nth-child(3)::before{content:'ตรวจครั้งที่ 2'}
+  #pricing .now{font-size:1.15rem}
+  #pricing .drone{flex:0 0 100%;margin:4px 0 0;text-align:right;font-size:.64rem}
+  #p-house .tbl-wrap::before{content:'บ้านเดี่ยว · บ้านแฝด · บ้านสร้างเอง';display:block;
+    margin:0 4px 10px;font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+}
 .notes{margin-top:20px;padding:22px 24px;border-radius:16px;border:1px dashed var(--gold);background:var(--cream)}
 .notes h4{font-size:.78rem;letter-spacing:.18em;color:var(--gold-dk);text-transform:uppercase;margin-bottom:10px}
 .notes li{font-size:.82rem;color:var(--brown);margin-bottom:6px;list-style:none;padding-left:16px;position:relative;line-height:1.75}
