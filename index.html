@@ -23,9 +23,10 @@
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#C8A24A">
 <link rel="icon" href="img/logo.jpg">
+<link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#FFFDF8;
@@ -54,7 +55,7 @@ body{
   font-family:'Prompt',system-ui,sans-serif;font-weight:300;line-height:1.75;
   overflow-x:clip;-webkit-font-smoothing:antialiased;
 }
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit}
 .wrap{width:min(1180px,92vw);margin:0 auto}
@@ -690,7 +691,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
 <body>
 
 <div id="loader">
-  <img class="loader-logo" src="img/logo.jpg" alt="Zing Star Inspector">
+  <img class="loader-logo" src="img/logo.jpg" alt="Zing Star Inspector" width="946" height="946">
 </div>
 
 <div id="progress"></div>
@@ -698,7 +699,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
 <nav id="nav">
   <div class="wrap nav-in">
     <a href="#home" class="brand">
-      <img src="img/logo.jpg" alt="Zing Star Inspector">
+      <img src="img/logo.jpg" alt="Zing Star Inspector" width="946" height="946">
       <span class="brand-txt"><strong>ZING STAR</strong><small>INSPECTOR</small></span>
     </a>
     <div class="nav-right">
@@ -740,7 +741,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
   <div class="grid-lines"></div>
   <canvas id="dust"></canvas>
   <div class="wrap hero-in">
-    <img class="hero-logo" src="img/logo.jpg" alt="Zing Star Inspector">
+    <img class="hero-logo" src="img/logo.jpg" alt="Zing Star Inspector" width="946" height="946">
     <span class="eyebrow"><i class="dot"></i> ตรวจโดยวิศวกรมีใบประกอบวิชาชีพ</span>
     <h1><span class="nw">ตรวจบ้าน</span> <span class="nw">ตรวจคอนโด</span><br><span class="gold"><span class="nw">ก่อนโอน</span> <span class="nw">อย่างมั่นใจ</span></span></h1>
     <p class="hero-sub">บริษัท ซิง สตาร์ เอนจิเนียริ่ง แอนด์ คอนสตรัคชั่น จำกัด<br>บริการรับตรวจบ้าน คอนโด โดยวิศวกรมืออาชีพ</p>
@@ -824,22 +825,22 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     </div>
     <div class="reviews rv">
       <button class="rv-shot" data-src="img/review/r-01.webp" aria-label="ดูรีวิวจากลูกค้า">
-        <img src="img/review/r-01.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async">
+        <img src="img/review/r-01.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async" width="1100" height="1855">
       </button>
       <button class="rv-shot" data-src="img/review/r-02.webp" aria-label="ดูรีวิวจากลูกค้า">
-        <img src="img/review/r-02.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async">
+        <img src="img/review/r-02.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async" width="1100" height="1866">
       </button>
       <button class="rv-shot" data-src="img/review/r-03.webp" aria-label="ดูรีวิวจากลูกค้า">
-        <img src="img/review/r-03.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async">
+        <img src="img/review/r-03.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async" width="1100" height="1710">
       </button>
       <button class="rv-shot" data-src="img/review/r-04.webp" aria-label="ดูรีวิวจากลูกค้า">
-        <img src="img/review/r-04.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async">
+        <img src="img/review/r-04.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async" width="1100" height="1700">
       </button>
       <button class="rv-shot" data-src="img/review/r-05.webp" aria-label="ดูรีวิวจากลูกค้า">
-        <img src="img/review/r-05.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async">
+        <img src="img/review/r-05.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async" width="1100" height="1650">
       </button>
       <button class="rv-shot" data-src="img/review/r-06.webp" aria-label="ดูรีวิวจากลูกค้า">
-        <img src="img/review/r-06.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async">
+        <img src="img/review/r-06.webp" alt="รีวิวจากลูกค้าบน Facebook" loading="lazy" decoding="async" width="1100" height="1931">
       </button>
     </div>
     <div class="fb-line" style="margin-top:26px">
@@ -865,251 +866,251 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     </div>
     <div class="shots rv" id="shots">
       <button class="shot" data-cat="house" data-src="img/work/house/h-01.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-01.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-01.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-02.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-02.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-02.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-03.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-03.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-03.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="926">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-04.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-04.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-04.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-05.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-05.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-05.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-06.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-06.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-06.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-07.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-07.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-07.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="910">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-08.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-08.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-08.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="917">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-09.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-09.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-09.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="926">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-10.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-10.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-10.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-11.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-11.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-11.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-12.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-12.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-12.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="915">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-13.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-13.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-13.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-14.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-14.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-14.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="922">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-15.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-15.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-15.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-16.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-16.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-16.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="917">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-17.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-17.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-17.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-18.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-18.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-18.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="933">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-19.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-19.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-19.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-20.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-20.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-20.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-21.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-21.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-21.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-22.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-22.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-22.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-23.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-23.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-23.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-24.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-24.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-24.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="927">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-25.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-25.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-25.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="923">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-26.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-26.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-26.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-27.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-27.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-27.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-28.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-28.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-28.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-29.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-29.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-29.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="house" data-src="img/work/house/h-30.webp" aria-label="ดูภาพผลงานตรวจบ้าน">
-        <img src="img/work/house/h-30.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async">
+        <img src="img/work/house/h-30.webp" alt="ผลงานตรวจบ้าน" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจบ้าน</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-01.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-01.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-01.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-02.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-02.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-02.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-03.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-03.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-03.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="922">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-04.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-04.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-04.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-05.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-05.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-05.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-06.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-06.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-06.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="917">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-07.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-07.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-07.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="926">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-08.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-08.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-08.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-09.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-09.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-09.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="921">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-10.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-10.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-10.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-11.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-11.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-11.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-12.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-12.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-12.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="921">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-13.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-13.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-13.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="919">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-14.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-14.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-14.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="922">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-15.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-15.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-15.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="924">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-16.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-16.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-16.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-17.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-17.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-17.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-18.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-18.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-18.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="916">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-19.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-19.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-19.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="914">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-20.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-20.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-20.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-21.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-21.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-21.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="921">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-22.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-22.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-22.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="920">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-23.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-23.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-23.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="916">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="town" data-src="img/work/town/t-24.webp" aria-label="ดูภาพผลงานตรวจทาวน์โฮม">
-        <img src="img/work/town/t-24.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async">
+        <img src="img/work/town/t-24.webp" alt="ผลงานตรวจทาวน์โฮม" loading="lazy" decoding="async" width="1100" height="922">
         <span class="shot-tag">ผลงานตรวจทาวน์โฮม</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-01.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-01.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-01.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="927">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-02.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-02.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-02.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="939">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-03.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-03.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-03.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="939">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-04.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-04.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-04.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="936">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-05.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-05.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-05.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="939">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-06.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-06.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-06.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="916">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-07.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-07.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-07.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="922">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
       <button class="shot" data-cat="condo" data-src="img/work/condo/c-08.webp" aria-label="ดูภาพผลงานตรวจคอนโด">
-        <img src="img/work/condo/c-08.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async">
+        <img src="img/work/condo/c-08.webp" alt="ผลงานตรวจคอนโด" loading="lazy" decoding="async" width="1100" height="915">
         <span class="shot-tag">ผลงานตรวจคอนโด</span>
       </button>
     </div>
@@ -1472,9 +1473,9 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     </div>
     <div class="addon">
       <div class="addon-pics rv-l">
-        <img src="img/mesh1.jpg" alt="ตะแกรงกันงู กันสัตว์รบกวน" loading="lazy">
-        <img src="img/mesh2.jpg" alt="ตะแกรงติดตั้งจริงหน้างาน" loading="lazy">
-        <img src="img/mesh3.jpg" alt="ตัวอย่างงานตะแกรงเหล็ก" loading="lazy">
+        <img src="img/mesh1.jpg" alt="ตะแกรงกันงู กันสัตว์รบกวน" loading="lazy" width="1074" height="1523">
+        <img src="img/mesh2.jpg" alt="ตะแกรงติดตั้งจริงหน้างาน" loading="lazy" width="1536" height="2048">
+        <img src="img/mesh3.jpg" alt="ตัวอย่างงานตะแกรงเหล็ก" loading="lazy" width="1015" height="1613">
       </div>
       <div class="addon-txt rv-r">
         <h3>ตะแกรงกันงู<br>กันสัตว์รบกวน</h3>
@@ -1522,7 +1523,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     </div>
     <div class="flow rv">
       <button class="flow-pic" data-src="img/process.webp" aria-label="ดูขั้นตอนการทำงานแบบเต็ม">
-        <img src="img/process.webp" alt="ขั้นตอนในการทำงาน Zing Star Inspector" loading="lazy" decoding="async">
+        <img src="img/process.webp" alt="ขั้นตอนในการทำงาน Zing Star Inspector" loading="lazy" decoding="async" width="1000" height="1415">
       </button>
       <p class="flow-note">แตะที่ภาพเพื่อดูรายละเอียดขั้นตอนแบบเต็ม</p>
     </div>
@@ -1554,13 +1555,13 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     </div>
     <div class="reports rv">
       <button class="rep-shot" data-src="img/report/rep-01.webp" aria-label="ดูตัวอย่างรายงาน">
-        <img src="img/report/rep-01.webp" alt="ตัวอย่างรายงานการตรวจสอบ" loading="lazy" decoding="async">
+        <img src="img/report/rep-01.webp" alt="ตัวอย่างรายงานการตรวจสอบ" loading="lazy" decoding="async" width="1100" height="1338">
       </button>
       <button class="rep-shot" data-src="img/report/rep-02.webp" aria-label="ดูตัวอย่างรายงาน">
-        <img src="img/report/rep-02.webp" alt="ตัวอย่างรายงานการตรวจสอบ" loading="lazy" decoding="async">
+        <img src="img/report/rep-02.webp" alt="ตัวอย่างรายงานการตรวจสอบ" loading="lazy" decoding="async" width="1100" height="1100">
       </button>
       <button class="rep-shot" data-src="img/report/rep-03.webp" aria-label="ดูตัวอย่างรายงาน">
-        <img src="img/report/rep-03.webp" alt="ตัวอย่างรายงานการตรวจสอบ" loading="lazy" decoding="async">
+        <img src="img/report/rep-03.webp" alt="ตัวอย่างรายงานการตรวจสอบ" loading="lazy" decoding="async" width="1100" height="1100">
       </button>
     </div>
   </div>
@@ -1574,7 +1575,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
       <div class="rule"></div>
     </div>
     <div class="about">
-      <div class="about-pic rv-l"><img src="img/team.jpg" alt="ทีมงาน Zing Star Inspector" loading="lazy"></div>
+      <div class="about-pic rv-l"><img src="img/team.jpg" alt="ทีมงาน Zing Star Inspector" loading="lazy" width="1284" height="696"></div>
       <div class="about-txt rv-r">
         <h3>บริษัท ซิง สตาร์ เอนจิเนียริ่ง<br>แอนด์ คอนสตรัคชั่น จำกัด</h3>
         <p>เราคือทีมวิศวกรผู้เชี่ยวชาญด้านการตรวจสอบคุณภาพบ้านและคอนโดก่อนโอน ตรวจครบทุกระบบด้วยเครื่องมือมาตรฐาน พร้อมรายงานที่ละเอียดและใช้งานได้จริง</p>
@@ -1646,7 +1647,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
   <div class="wrap">
     <div class="ft-top">
       <div class="ft-brand">
-        <img src="img/logo.jpg" alt="Zing Star Inspector">
+        <img src="img/logo.jpg" alt="Zing Star Inspector" width="946" height="946">
         <p>บริษัท ซิง สตาร์ เอนจิเนียริ่ง แอนด์ คอนสตรัคชั่น จำกัด<br>บริการรับตรวจบ้าน ตรวจคอนโด โดยวิศวกรมีใบประกอบวิชาชีพ ยินดีให้บริการครับ</p>
       </div>
       <div class="ft-col">
