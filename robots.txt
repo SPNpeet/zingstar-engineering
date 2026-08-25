@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /base.html
+
+Sitemap: https://zingstarengineering.com/sitemap.xml
