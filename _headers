@@ -4,3 +4,14 @@
   Strict-Transport-Security: max-age=31536000
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+# รูปตารางราคาเก่าและไฟล์ฝาแฝดของหน้าแรก หน้าเว็บไม่ได้เรียกใช้แต่เปิดจาก URL ตรงได้
+# กันไม่ให้ Google เก็บไปโชว์ราคาที่หมดอายุแล้ว
+/img/price.jpg
+  X-Robots-Tag: noindex
+
+/img/contact.jpg
+  X-Robots-Tag: noindex
+
+/base.html
+  X-Robots-Tag: noindex
