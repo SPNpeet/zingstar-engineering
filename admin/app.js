@@ -75,8 +75,18 @@ async function readHead() {
   return j.object.sha;
 }
 
+// คลังนี้เปิดสาธารณะ อ่านได้โดยไม่ต้องมีรหัส ถ้าเช็คแค่ว่าอ่านไฟล์ได้
+// รหัสมั่ว ๆ ก็ผ่านประตูเข้ามาได้ ต้องถาม GitHub ตรง ๆ ว่ารหัสนี้เขียนคลังนี้ได้จริงไหม
+async function assertCanWrite() {
+  const repo = await gh(repoPath(''));
+  if (!repo.permissions || !repo.permissions.push) {
+    throw new Error('รหัสนี้เข้าได้แต่ไม่มีสิทธิ์แก้ไขคลังนี้ ตรวจว่าตอนสร้างเลือก repository ถูกตัว และให้สิทธิ์ Contents เป็น Read and write');
+  }
+}
+
 // ---------- โหลดข้อมูล ----------
 async function load() {
+  await assertCanWrite();
   headSha = await readHead();
   const raw = await readFile(DATA_FILE);
   original = JSON.parse(raw);
