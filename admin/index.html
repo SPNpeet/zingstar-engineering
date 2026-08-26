@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<title>จัดการค่าบริการ | Zing Star Inspector</title>
+<link rel="icon" href="../img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand">
+      <img src="../img/logo.jpg" alt="" width="34" height="34">
+      <div>
+        <strong>จัดการค่าบริการ</strong>
+        <span>zingstarengineering.com</span>
+      </div>
+    </div>
+    <div class="bar-act">
+      <a class="lnk" href="https://zingstarengineering.com/#pricing" target="_blank" rel="noopener">ดูหน้าเว็บจริง</a>
+      <button type="button" id="signout" class="btn btn-ghost" hidden>ออกจากระบบ</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="gate" class="card gate">
+    <h1>เข้าสู่ระบบ</h1>
+    <p class="muted">
+      หน้านี้แก้ตารางค่าบริการบนเว็บไซต์โดยตรง ต้องใช้รหัสเข้าใช้งาน (GitHub token)
+      ที่สร้างไว้สำหรับงานนี้โดยเฉพาะ ดูวิธีสร้างได้ในคู่มือการใช้งาน
+    </p>
+    <label class="fld">
+      <span>รหัสเข้าใช้งาน</span>
+      <input type="password" id="token" autocomplete="off" spellcheck="false" placeholder="github_pat_...">
+    </label>
+    <p class="note">
+      รหัสถูกเก็บไว้ในแท็บนี้ชั่วคราวเท่านั้น ปิดแท็บแล้วหายไป ไม่ได้ถูกบันทึกลงเครื่อง
+      และไม่ได้ถูกส่งไปที่ไหนนอกจาก GitHub
+    </p>
+    <button type="button" id="signin" class="btn btn-go">เข้าสู่ระบบ</button>
+    <p id="gate-msg" class="msg" role="status"></p>
+  </section>
+
+  <div id="app" hidden>
+
+    <section class="card">
+      <div class="card-h">
+        <h2>ป้ายโปรโมชั่น</h2>
+        <label class="sw">
+          <input type="checkbox" id="promo-on">
+          <span>แสดงบนเว็บ</span>
+        </label>
+      </div>
+      <label class="fld">
+        <span>ข้อความบนป้ายแดงเหนือตาราง</span>
+        <input type="text" id="promo-text" maxlength="120">
+      </label>
+      <p class="note">
+        ปิดสวิตช์เมื่อโปรหมด ป้ายจะหายไปจากเว็บทันทีโดยที่ราคาในตารางยังอยู่เหมือนเดิม
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="card-h">
+        <h2>แถบข้อความใต้ปุ่มเลือกประเภท</h2>
+        <label class="sw">
+          <input type="checkbox" id="banner-on">
+          <span>แสดงบนเว็บ</span>
+        </label>
+      </div>
+      <label class="fld">
+        <span>ข้อความตัวหนา</span>
+        <input type="text" id="banner-lead" maxlength="80">
+      </label>
+      <label class="fld">
+        <span>ข้อความต่อท้าย</span>
+        <textarea id="banner-rest" rows="2" maxlength="240"></textarea>
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="card-h">
+        <h2>ตารางค่าบริการ</h2>
+        <div class="tabs" id="tabs" role="tablist"></div>
+      </div>
+      <div id="tables"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>หมายเหตุใต้ตาราง</h2></div>
+      <div id="notes"></div>
+      <button type="button" class="btn btn-ghost" id="note-add">เพิ่มหมายเหตุ</button>
+    </section>
+
+    <section class="card">
+      <div class="card-h">
+        <h2>ตัวอย่างก่อนเผยแพร่</h2>
+        <button type="button" class="btn btn-ghost" id="preview-refresh">อัปเดตตัวอย่าง</button>
+      </div>
+      <div class="zs-preview" id="preview"></div>
+    </section>
+
+    <section class="card publish">
+      <div class="card-h"><h2>เผยแพร่ขึ้นเว็บจริง</h2></div>
+      <div id="changes" class="changes"></div>
+      <label class="fld">
+        <span>บันทึกว่าแก้อะไร (ไม่ใส่ก็ได้)</span>
+        <input type="text" id="commit-msg" maxlength="120" placeholder="เช่น ต่อโปรถึงสิ้นเดือนกันยายน">
+      </label>
+      <div class="row">
+        <button type="button" id="publish" class="btn btn-go">เผยแพร่</button>
+        <button type="button" id="reload" class="btn btn-ghost">ยกเลิกการแก้ ดึงของบนเว็บมาใหม่</button>
+      </div>
+      <p id="pub-msg" class="msg" role="status"></p>
+      <p class="note">
+        กดเผยแพร่แล้วเว็บจะอัปเดตเองภายในประมาณ 1 นาที
+        ถ้าเปิดหน้าเว็บแล้วยังเห็นของเก่า ให้กด Ctrl+Shift+R หรือรอสักครู่
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

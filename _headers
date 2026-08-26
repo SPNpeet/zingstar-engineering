@@ -15,3 +15,17 @@
 
 /base.html
   X-Robots-Tag: noindex
+
+# หน้าจัดการค่าบริการ ไม่ให้ค้นเจอ ไม่ให้ฝัง iframe และล็อกไม่ให้หน้านี้ยิงออกไปที่อื่น
+# นอกจาก api.github.com อย่างเดียว ถ้ามีสคริปต์แปลกปลอมหลุดเข้ามาก็ส่งข้อมูลออกไม่ได้
+/admin
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src https://api.github.com; form-action 'none'; base-uri 'none'; frame-ancestors 'none'
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store
+  Referrer-Policy: no-referrer
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src https://api.github.com; form-action 'none'; base-uri 'none'; frame-ancestors 'none'

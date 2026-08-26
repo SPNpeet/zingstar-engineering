@@ -3,5 +3,7 @@ User-agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /base.html
+Disallow: /admin
+Disallow: /data/
 
 Sitemap: https://zingstarengineering.com/sitemap.xml
