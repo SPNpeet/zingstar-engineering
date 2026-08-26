@@ -1,0 +1,7 @@
+# บังคับ LF ในคลัง กัน diff รกจาก CRLF ของ Windows
+* text=auto eol=lf
+
+*.jpg binary
+*.png binary
+*.webp binary
+*.mp4 binary
