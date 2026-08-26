@@ -101,6 +101,9 @@ input:focus-visible,textarea:focus-visible,select:focus-visible{
 .lbl{display:none}
 @media(max-width:760px){.lbl{display:block}}
 
+.span4{grid-column:span 4}
+@media(max-width:760px){.span4{grid-column:auto}}
+
 .note-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:9px}
 .note-row textarea{flex:1 1 auto}
 

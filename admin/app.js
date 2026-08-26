@@ -210,7 +210,7 @@ function rowEditor(table, row, idx) {
     const askCell = el('div');
     askCell.appendChild(el('div', 'lbl', 'ข้อความแทนราคา'));
     askCell.appendChild(text(row.a.ask, (v) => { row.a.ask = v; row.b.ask = v; }));
-    askCell.style.gridColumn = 'span 4';
+    askCell.className = 'span4';
     wrap.appendChild(askCell);
   } else {
     put(HEADS[1], text(row.a.was, (v) => { setPrice(row.a, 'was', v); }, 'ว่างได้'));
