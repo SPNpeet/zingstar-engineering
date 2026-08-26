@@ -346,8 +346,20 @@ tbody tr:hover{background:var(--yellow)}
 tbody tr:hover td:first-child{padding-left:24px;font-weight:500}
 tbody tr:last-child td{border-bottom:none}
 .was{color:var(--muted);text-decoration:line-through;font-size:.78rem;margin-right:7px}
+.ask{color:var(--brown);font-size:.82rem;font-weight:500}
 .now{color:#B3341F;font-weight:600;font-size:1rem}
 .drone{display:inline-block;font-size:.64rem;color:var(--muted);margin-left:5px;white-space:nowrap}
+/* ป้ายบอกว่าตรวจรอบเดียวจบก็ได้ — คั่นระหว่างแท็บกับตาราง ให้อ่านเจอก่อนดูราคา */
+.once-note{display:flex;align-items:center;justify-content:center;gap:11px;text-align:center;
+  max-width:860px;margin:0 auto 26px;padding:14px 26px;border-radius:100px;
+  border:1.5px solid var(--gold-dk);background:linear-gradient(120deg,var(--cream-2),var(--sand));
+  color:var(--brown-dk);font-size:.92rem;line-height:1.6;box-shadow:var(--shadow)}
+.once-note b{font-weight:600}
+.once-ic{width:23px;height:23px;flex:0 0 auto;color:var(--gold-dk)}
+@media(max-width:700px){
+  .once-note{border-radius:16px;padding:13px 18px;font-size:.85rem;gap:9px;align-items:flex-start;text-align:left}
+  .once-ic{margin-top:2px}
+}
 /* ===== pricing tables on phones =====
    the table carries min-width:540px, so on a phone the "ตรวจครั้งที่ 2" column
    sits past the edge of the scroller and gets missed unless you swipe sideways.
@@ -367,12 +379,17 @@ tbody tr:last-child td{border-bottom:none}
   #pricing tbody tr:nth-child(4){animation-delay:.12s}
   #pricing tbody tr:nth-child(5){animation-delay:.16s}
   #pricing tbody tr:nth-child(6){animation-delay:.2s}
+  #pricing tbody tr:nth-child(7){animation-delay:.24s}
+  #pricing tbody tr:nth-child(8){animation-delay:.28s}
+  #pricing tbody tr:nth-child(9){animation-delay:.32s}
+  #pricing tbody tr:nth-child(10){animation-delay:.36s}
   #pricing tbody td,#pricing tbody td:not(:first-child){
     display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;
     gap:0 10px;padding:12px 16px;border-bottom:none;text-align:right}
   #pricing tbody td:first-child,#pricing tbody tr:hover td:first-child{
     background:linear-gradient(120deg,var(--gold),var(--yellow));color:var(--ink);
-    font-weight:600;font-size:.86rem;justify-content:flex-start;text-align:left;padding:13px 16px}
+    font-weight:600;font-size:.86rem;justify-content:center;text-align:center;padding:13px 16px}
+  #pricing tbody td:first-child::before{content:'ขนาด ';font-weight:400;opacity:.72}
   #pricing tbody td:nth-child(2){border-bottom:1px solid var(--line-2)}
   #pricing tbody td:not(:first-child)::before{
     flex:1 1 auto;text-align:left;white-space:nowrap;font-size:.74rem;
@@ -663,7 +680,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
       "itemOffered": {
         "@type": "Service",
         "name": "ตรวจคอนโดก่อนโอน",
-        "description": "ตรวจห้องชุดก่อนโอน ทุกขนาดตั้งแต่ต่ำกว่า 30 ตร.ม. ถึง 120 ตร.ม.",
+        "description": "ตรวจห้องชุดก่อนโอน ทุกขนาด ตั้งแต่ต่ำกว่า 30 ตร.ม. จนถึงมากกว่า 200 ตร.ม.",
         "serviceType": "การตรวจสอบอาคารก่อนโอนกรรมสิทธิ์",
         "provider": {
           "@id": "https://zingstarengineering.com/#business"
@@ -1156,6 +1173,10 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
       <button class="tab" data-p="town">ทาวน์โฮม</button>
       <button class="tab" data-p="house">บ้าน</button>
     </div>
+    <div class="once-note rv">
+      <svg class="once-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.4 12.1 2.5 2.5 4.7-5.2"/></svg>
+      <span><b>เลือกตรวจรอบเดียวจบก็ได้</b> ทั้งคอนโด ทาวน์โฮม และบ้าน — ตรวจครั้งที่ 2 เป็นทางเลือก ไม่บังคับ จ่ายเฉพาะรอบที่ตรวจจริง</span>
+    </div>
     <div class="panel on" id="p-condo">
       <div class="tbl-wrap rv">
         <table>
@@ -1165,6 +1186,9 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
             <tr><td>31 – 40 ตร.ม.</td><td><span class="now">2,400</span></td><td><span class="was">1,000</span><span class="now">700</span></td></tr>
             <tr><td>41 – 60 ตร.ม.</td><td><span class="now">3,400</span></td><td><span class="was">1,500</span><span class="now">1,000</span></td></tr>
             <tr><td>61 – 120 ตร.ม.</td><td><span class="now">4,400</span></td><td><span class="was">1,500</span><span class="now">1,000</span></td></tr>
+            <tr><td>121 – 160 ตร.ม.</td><td><span class="now">5,200</span></td><td><span class="now">1,500</span></td></tr>
+            <tr><td>161 – 200 ตร.ม.</td><td><span class="now">6,000</span></td><td><span class="now">1,800</span></td></tr>
+            <tr><td>มากกว่า 200 ตร.ม.</td><td><span class="now">6,800</span></td><td><span class="now">2,000</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1177,6 +1201,9 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
             <tr><td>ต่ำกว่า 130 ตร.ม.</td><td><span class="was">4,500</span><span class="now">4,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="was">2,000</span><span class="now">1,700</span></td></tr>
             <tr><td>131 – 160 ตร.ม.</td><td><span class="was">5,000</span><span class="now">4,400</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="was">2,000</span><span class="now">1,700</span></td></tr>
             <tr><td>161 – 190 ตร.ม.</td><td><span class="was">5,500</span><span class="now">4,900</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="was">2,000</span><span class="now">1,700</span></td></tr>
+            <tr><td>191 – 250 ตร.ม.</td><td><span class="now">5,500</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="now">2,000</span></td></tr>
+            <tr><td>251 – 300 ตร.ม.</td><td><span class="now">6,200</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="now">2,200</span></td></tr>
+            <tr><td>มากกว่า 300 ตร.ม.</td><td><span class="now">7,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="now">2,500</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1192,6 +1219,9 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
             <tr><td>220 – 350 ตร.ม.</td><td><span class="was">8,000</span><span class="now">6,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="was">2,500</span><span class="now">2,000</span></td></tr>
             <tr><td>351 – 500 ตร.ม.</td><td><span class="was">9,000</span><span class="now">7,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="was">2,500</span><span class="now">2,000</span></td></tr>
             <tr><td>501 – 1,000 ตร.ม.</td><td><span class="was">10,000</span><span class="now">8,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="was">3,000</span><span class="now">2,500</span></td></tr>
+            <tr><td>1,001 – 1,500 ตร.ม.</td><td><span class="now">10,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="now">3,000</span></td></tr>
+            <tr><td>1,501 – 2,000 ตร.ม.</td><td><span class="now">12,000</span><span class="drone">+ ฟรีบินโดรน</span></td><td><span class="now">4,000</span></td></tr>
+            <tr><td>มากกว่า 2,000 ตร.ม.</td><td><span class="ask">แจ้งราคาเพิ่มเติม</span></td><td><span class="ask">แจ้งราคาเพิ่มเติม</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -1199,6 +1229,8 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     <div class="notes rv">
       <h4>หมายเหตุ</h4>
       <ul>
+        <li>ตรวจรอบเดียวจบได้ทุกประเภท ทั้งคอนโด ทาวน์โฮม และบ้าน ไม่บังคับตรวจซ้ำครั้งที่ 2</li>
+        <li>ทาวน์โฮมและบ้าน ทีมเข้าตรวจขั้นต่ำ 3 คน/หลัง ไม่เก็บมัดจำ ชำระเงินหน้างาน</li>
         <li>กรณีไปแล้วไม่พร้อมตรวจ คิดค่าชำระตามตรวจครั้งที่ 1</li>
         <li>กรณีห้องไม่ตรงตามขนาดที่แจ้ง จะขอคิดราคาค่าบริการตามพื้นที่ขนาดจริง</li>
         <li>กรณีต่างจังหวัด มีค่าเดินทางเพิ่มเติมบางจังหวัด (สามารถสอบถามเพิ่มเติมจังหวัดที่ให้บริการได้)</li>
@@ -1227,7 +1259,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
         <div class="svc-img" style="background-image:url('img/svc-condo.webp')"></div>
         <span class="svc-badge">Service 02</span>
         <h3>ตรวจคอนโดมิเนียม</h3>
-        <p>ตรวจห้องชุดก่อนโอน ทุกขนาดตั้งแต่ต่ำกว่า 30 ตร.ม. ถึง 120 ตร.ม. ตรวจซ้ำครั้งที่ 2 ราคาพิเศษ</p>
+        <p>ตรวจห้องชุดก่อนโอน ทุกขนาด ตั้งแต่ต่ำกว่า 30 ตร.ม. จนถึงมากกว่า 200 ตร.ม. ตรวจรอบเดียวจบก็ได้ หรือตรวจซ้ำครั้งที่ 2 ในราคาพิเศษ</p>
         <ul><li>ผนัง / พื้น</li><li>งานสี</li><li>สุขภัณฑ์</li><li>รอยรั่วซึม</li><li>ตรวจซ้ำ</li></ul>
       </article>
       <article class="svc rv-r">
