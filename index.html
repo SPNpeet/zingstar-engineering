@@ -407,6 +407,34 @@ tbody tr:last-child td{border-bottom:none}
 .notes li{font-size:.82rem;color:var(--brown);margin-bottom:6px;list-style:none;padding-left:16px;position:relative;line-height:1.75}
 .notes li::before{content:'—';position:absolute;left:0;color:var(--gold-dk)}
 
+/* ===== คำถามที่พบบ่อย =====
+   ใช้ details/summary ของเบราว์เซอร์ตรง ๆ กดได้ด้วยคีย์บอร์ด โปรแกรมอ่านหน้าจอเข้าใจ
+   และเปิดปิดได้แม้สคริปต์ไม่ทำงาน ไม่ต้องเขียน JS เพิ่มสักบรรทัด */
+.ft-addr{font-style:normal;margin-top:14px;font-size:.78rem;line-height:1.9;opacity:.72}
+.ft-addr span{opacity:.85}
+.faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq-item{border:1px solid var(--line);border-radius:14px;background:#fff;
+  box-shadow:var(--shadow);overflow:hidden;transition:border-color .3s}
+.faq-item[open]{border-color:var(--gold-dk)}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:17px 54px 17px 22px;position:relative;
+  font-size:.95rem;font-weight:500;color:var(--brown-dk);line-height:1.65}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{background:var(--cream)}
+.faq-item summary:focus-visible{outline:2px solid var(--gold-dk);outline-offset:-2px}
+.faq-item summary::after{
+  content:'';position:absolute;right:22px;top:50%;width:11px;height:11px;
+  margin-top:-6px;border-right:2px solid var(--gold-dk);border-bottom:2px solid var(--gold-dk);
+  transform:rotate(45deg);transition:transform .3s var(--ease)}
+.faq-item[open] summary::after{transform:rotate(-135deg);margin-top:-2px}
+.faq-a{padding:0 22px 20px;font-size:.88rem;line-height:1.9;color:var(--brown);
+  border-top:1px solid var(--line-2);margin-top:-1px;padding-top:16px}
+@media(max-width:600px){
+  .faq-item summary{font-size:.9rem;padding:15px 46px 15px 17px}
+  .faq-item summary::after{right:17px}
+  .faq-a{padding:14px 17px 17px;font-size:.85rem}
+}
+
 /* ===== addon ===== */
 .addon{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,5vw,58px);align-items:center}
 @media(max-width:860px){.addon{grid-template-columns:1fr}}
@@ -655,6 +683,27 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     "@type": "Country",
     "name": "ประเทศไทย"
   },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "24/4 หมู่ที่ 6 ตำบลขุนศรี",
+    "addressLocality": "อำเภอไทรน้อย",
+    "addressRegion": "นนทบุรี",
+    "postalCode": "11150",
+    "addressCountry": "TH"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "taxID": "0125567025733",
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "เลขทะเบียนนิติบุคคล",
+    "value": "0125567025733"
+  },
+  "foundingDate": "2024-07-12",
   "sameAs": [
     "https://www.facebook.com/share/1BWRSAGYHn/",
     "https://www.instagram.com/zingstar__inspector",
@@ -738,6 +787,94 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
   font-size:1rem;font-weight:600;color:var(--brown-dk);letter-spacing:.02em}
 </style>
 </noscript>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "ตรวจรอบเดียวจบได้ไหม จำเป็นต้องตรวจซ้ำครั้งที่ 2 หรือเปล่า",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ตรวจรอบเดียวจบได้ทุกประเภท ทั้งคอนโด ทาวน์โฮม และบ้าน การตรวจครั้งที่ 2 เป็นทางเลือก ไม่บังคับ ส่วนใหญ่ใช้ตรวจซ้ำหลังโครงการแก้งานตามรายงานแล้ว จ่ายเฉพาะรอบที่ตรวจจริง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ต้องวางมัดจำก่อนไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่เก็บมัดจำจองคิว จองแล้วไม่ต้องโอนอะไรล่วงหน้า ชำระเงินหน้างานหลังตรวจเสร็จ"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ได้รายงานเมื่อไหร่ และรายงานหน้าตาเป็นอย่างไร",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ส่งรายงานภายใน 2 วันหลังเข้าตรวจ เป็นรายงานที่มีภาพประกอบทุกจุดที่พบ ระบุตำแหน่งชัดเจน ใช้ยื่นให้โครงการแก้ไขได้จริง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ใครเป็นคนเข้าตรวจ",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "วิศวกรที่มีใบอนุญาตประกอบวิชาชีพ หรือใบ กว. ทุกคน สำหรับทาวน์โฮมและบ้าน ทีมเข้าตรวจขั้นต่ำ 3 คนต่อหลัง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ตรวจอะไรบ้าง",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "โครงสร้าง ระบบไฟฟ้า ระบบประปา งานสถาปัตย์ และหลังคาด้วยโดรน ครอบคลุมทั้งบ้านใหม่ก่อนโอน บ้านมือสอง งานรีโนเวท และการตรวจระหว่างก่อสร้าง"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "บินโดรนสำรวจหลังคาคิดเงินเพิ่มไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ไม่คิดเพิ่ม รวมอยู่ในค่าบริการตรวจบ้านและทาวน์โฮมแล้ว"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ค่าเดินทางคิดอย่างไร ตรวจต่างจังหวัดได้ไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ในพื้นที่ให้บริการปกติไม่คิดค่าเดินทาง ส่วนต่างจังหวัดมีค่าเดินทางเพิ่มเติมบางจังหวัด สอบถามจังหวัดที่ให้บริการได้ทาง LINE หรือโทรศัพท์"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ถ้าขนาดห้องไม่ตรงกับที่แจ้งไว้ตอนจอง",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "คิดค่าบริการตามขนาดพื้นที่จริง และกรณีไปถึงแล้วห้องยังไม่พร้อมให้ตรวจ จะคิดค่าชำระตามอัตราตรวจครั้งที่ 1"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "จองคิวอย่างไร ติดต่อได้ตอนไหน",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ทักผ่าน LINE หรือโทร 096 541 5436 และ 094 614 9958 รับติดต่อ 24 ชั่วโมง ยืนยันคิวฟรี ไม่มีค่าใช้จ่ายล่วงหน้า"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "เป็นบริษัทจดทะเบียนถูกต้องไหม",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "จดทะเบียนในชื่อ บริษัท ซิง สตาร์ เอนจิเนียริ่ง แอนด์ คอนสตรัคชั่น จำกัด เลขทะเบียน 0125567025733 ทุนจดทะเบียน 5,000,000 บาท สำนักงานตั้งอยู่ที่อำเภอไทรน้อย จังหวัดนนทบุรี"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#services">ข้ามไปที่เนื้อหาหลัก</a>
@@ -780,6 +917,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     <a href="#report">ตัวอย่าง Report</a>
     <a href="#pricing">ค่าบริการ</a>
     <a href="#about">เกี่ยวกับเรา</a>
+    <a href="#faq">คำถามที่พบบ่อย</a>
     <a href="#contact">ติดต่อเรา</a>
   </nav>
   <div class="drawer-foot">
@@ -1668,6 +1806,59 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
   </div>
 </section>
 
+<section id="faq" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-tag">FAQ</span>
+      <h2 class="sec-title">คำถามที่<em>พบบ่อย</em></h2>
+      <div class="rule"></div>
+      <p class="sec-desc">รวมคำถามที่ลูกค้าถามเข้ามาบ่อยที่สุด ถ้าไม่เจอคำตอบที่ต้องการ ทักมาทาง LINE ได้ตลอด</p>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item">
+        <summary>ตรวจรอบเดียวจบได้ไหม จำเป็นต้องตรวจซ้ำครั้งที่ 2 หรือเปล่า</summary>
+        <div class="faq-a">ตรวจรอบเดียวจบได้ทุกประเภท ทั้งคอนโด ทาวน์โฮม และบ้าน การตรวจครั้งที่ 2 เป็นทางเลือก ไม่บังคับ ส่วนใหญ่ใช้ตรวจซ้ำหลังโครงการแก้งานตามรายงานแล้ว จ่ายเฉพาะรอบที่ตรวจจริง</div>
+      </details>
+      <details class="faq-item">
+        <summary>ต้องวางมัดจำก่อนไหม</summary>
+        <div class="faq-a">ไม่เก็บมัดจำจองคิว จองแล้วไม่ต้องโอนอะไรล่วงหน้า ชำระเงินหน้างานหลังตรวจเสร็จ</div>
+      </details>
+      <details class="faq-item">
+        <summary>ได้รายงานเมื่อไหร่ และรายงานหน้าตาเป็นอย่างไร</summary>
+        <div class="faq-a">ส่งรายงานภายใน 2 วันหลังเข้าตรวจ เป็นรายงานที่มีภาพประกอบทุกจุดที่พบ ระบุตำแหน่งชัดเจน ใช้ยื่นให้โครงการแก้ไขได้จริง</div>
+      </details>
+      <details class="faq-item">
+        <summary>ใครเป็นคนเข้าตรวจ</summary>
+        <div class="faq-a">วิศวกรที่มีใบอนุญาตประกอบวิชาชีพ หรือใบ กว. ทุกคน สำหรับทาวน์โฮมและบ้าน ทีมเข้าตรวจขั้นต่ำ 3 คนต่อหลัง</div>
+      </details>
+      <details class="faq-item">
+        <summary>ตรวจอะไรบ้าง</summary>
+        <div class="faq-a">โครงสร้าง ระบบไฟฟ้า ระบบประปา งานสถาปัตย์ และหลังคาด้วยโดรน ครอบคลุมทั้งบ้านใหม่ก่อนโอน บ้านมือสอง งานรีโนเวท และการตรวจระหว่างก่อสร้าง</div>
+      </details>
+      <details class="faq-item">
+        <summary>บินโดรนสำรวจหลังคาคิดเงินเพิ่มไหม</summary>
+        <div class="faq-a">ไม่คิดเพิ่ม รวมอยู่ในค่าบริการตรวจบ้านและทาวน์โฮมแล้ว</div>
+      </details>
+      <details class="faq-item">
+        <summary>ค่าเดินทางคิดอย่างไร ตรวจต่างจังหวัดได้ไหม</summary>
+        <div class="faq-a">ในพื้นที่ให้บริการปกติไม่คิดค่าเดินทาง ส่วนต่างจังหวัดมีค่าเดินทางเพิ่มเติมบางจังหวัด สอบถามจังหวัดที่ให้บริการได้ทาง LINE หรือโทรศัพท์</div>
+      </details>
+      <details class="faq-item">
+        <summary>ถ้าขนาดห้องไม่ตรงกับที่แจ้งไว้ตอนจอง</summary>
+        <div class="faq-a">คิดค่าบริการตามขนาดพื้นที่จริง และกรณีไปถึงแล้วห้องยังไม่พร้อมให้ตรวจ จะคิดค่าชำระตามอัตราตรวจครั้งที่ 1</div>
+      </details>
+      <details class="faq-item">
+        <summary>จองคิวอย่างไร ติดต่อได้ตอนไหน</summary>
+        <div class="faq-a">ทักผ่าน LINE หรือโทร 096 541 5436 และ 094 614 9958 รับติดต่อ 24 ชั่วโมง ยืนยันคิวฟรี ไม่มีค่าใช้จ่ายล่วงหน้า</div>
+      </details>
+      <details class="faq-item">
+        <summary>เป็นบริษัทจดทะเบียนถูกต้องไหม</summary>
+        <div class="faq-a">จดทะเบียนในชื่อ บริษัท ซิง สตาร์ เอนจิเนียริ่ง แอนด์ คอนสตรัคชั่น จำกัด เลขทะเบียน 0125567025733 ทุนจดทะเบียน 5,000,000 บาท สำนักงานตั้งอยู่ที่อำเภอไทรน้อย จังหวัดนนทบุรี</div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section id="cta">
   <div class="cta-glow"></div>
   <div class="wrap cta-in rv">
@@ -1740,6 +1931,12 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
         <a href="tel:0946149958">094 614 9958</a>
         <a href="mailto:zings.inspector@gmail.com">zings.inspector@gmail.com</a>
         <a href="https://lin.ee/14aW2hy" target="_blank" rel="noopener">LINE Official</a>
+        <address class="ft-addr">
+          24/4 หมู่ที่ 6 ตำบลขุนศรี<br>
+          อำเภอไทรน้อย จังหวัดนนทบุรี 11150<br>
+          <span>เลขทะเบียนนิติบุคคล 0125567025733</span><br>
+          <span>เปิดรับติดต่อ 24 ชั่วโมง</span>
+        </address>
       </div>
       <div class="ft-col">
         <h5>ติดตามเรา</h5>
