@@ -63,6 +63,21 @@ node tools/verify-render.mjs --write
 หน้า admin เขียนลงคลังตัวจริงเท่านั้น ถ้าเจ้าของแก้ราคาผ่านหน้าเว็บไป
 ก่อนจะทำงานต่อจากเครื่องต้อง `git pull client main` ก่อน ไม่งั้นงานจะชนกัน
 
+## ที่อยู่ที่เสิร์ฟหน้าเว็บนี้อยู่
+
+| URL | คืออะไร |
+|---|---|
+| `zingstarengineering.com` | ตัวจริง |
+| `zingstar-engineering-site.pages.dev` | ที่อยู่สำรองที่ Cloudflare สร้างให้อัตโนมัติ ปิดไม่ได้ มี canonical ชี้โดเมนหลัก |
+| `spnpeet.github.io/zingstar-engineering` | สำเนาจาก GitHub Pages ของคลังพัฒนา มี canonical ชี้โดเมนหลัก |
+| `zing-star-inspector.pages.dev` | **โปรเจกต์ผี ต้องลบ** |
+
+`zing-star-inspector` เป็น Cloudflare Pages **คนละโปรเจกต์** กับที่ใช้จริง ค้างอยู่จาก build เก่า
+เสิร์ฟป้ายโปรเดือน ก.ค. 2026 ราคาชุดเก่า ไม่มี canonical และไม่มี robots.txt
+push โค้ดไม่ช่วย ต้องเข้า Cloudflare แล้วลบโปรเจกต์ทิ้งอย่างเดียว
+
+ถ้ามีคนรายงานว่าหน้าเว็บเพี้ยนหรือราคาไม่ตรง **ให้ถามก่อนว่าเปิด URL ไหน**
+
 ## Deploy
 
 ```bash
