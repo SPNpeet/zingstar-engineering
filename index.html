@@ -23,6 +23,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta name="theme-color" content="#C8A24A">
 <link rel="icon" href="img/logo.jpg">
+<link rel="apple-touch-icon" href="img/logo.jpg">
 <link rel="preload" as="image" href="img/hero.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1914,7 +1915,18 @@ addEventListener('scroll',()=>{const y=scrollY;
   const lb=document.getElementById('lb'),img=document.getElementById('lbImg'),
         cnt=document.getElementById('lbC'),P=document.getElementById('lbP'),N=document.getElementById('lbN');
   let list=[],i=0;
-  const show=()=>{img.src=list[i];cnt.textContent=(i+1)+' / '+list.length};
+  // ภาพในกล่องขยายถูกใส่ทีหลังด้วยสคริปต์ ถ้าไม่ยกคำบรรยายจากรูปย่อมาด้วย
+  // คนที่ใช้โปรแกรมอ่านหน้าจอจะเปิดภาพขึ้นมาแล้วไม่ได้ยินอะไรเลย
+  const altOf={};
+  document.querySelectorAll('[data-src]').forEach(host=>{
+    const im=host.querySelector('img[alt]');
+    if(im&&im.alt&&host.dataset.src) altOf[host.dataset.src]=im.alt;
+  });
+  const show=()=>{
+    img.src=list[i];
+    img.alt=altOf[list[i]]||'ภาพขยายจากผลงานตรวจบ้าน';
+    cnt.textContent=(i+1)+' / '+list.length;
+  };
   function open(group,src){
     list=group;i=Math.max(0,group.indexOf(src));show();
     lb.classList.add('open');document.body.style.overflow='hidden';
