@@ -54,7 +54,7 @@ export function renderTables(d) {
         .map((r) => '            <tr><td>' + esc(r.size) + '</td>' + cell(r.a) + cell(r.b) + '</tr>')
         .join(NL);
       return [
-        '    <div class="panel' + (i === 0 ? ' on' : '') + '" id="p-' + esc(t.id) + '">',
+        '    <div class="panel' + (i === 0 ? ' on' : '') + '" id="p-' + esc(t.id) + '" data-label="' + esc(t.tab) + '">',
         '      <div class="tbl-wrap' + (i === 0 ? ' rv' : '') + '">',
         '        <table>',
         '          <thead><tr><th>' + esc(t.head) + '</th><th>ตรวจครั้งที่ 1</th><th>ตรวจครั้งที่ 2</th></tr></thead>',

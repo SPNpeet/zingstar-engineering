@@ -614,6 +614,21 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
   .rv,.rv-l,.rv-r,.rv-s{opacity:1;transform:none}
 }
 </style>
+<noscript>
+<style>
+/* ไม่มีสคริปต์ = ตัวโหลดไม่มีใครสั่งปิด และเนื้อหา 70 ก้อนที่ตั้ง opacity:0 รอเอฟเฟกต์
+   จะไม่มีวันโผล่ คนที่ปิด JavaScript หรือสคริปต์โหลดไม่ทันจะเห็นหน้าว่างเปล่า
+   บล็อกนี้ทำงานเฉพาะตอนไม่มีสคริปต์เท่านั้น ไม่กระทบเส้นทางปกติ */
+#loader{display:none!important}
+.rv,.rv-l,.rv-r,.rv-s{opacity:1!important;transform:none!important}
+/* กดสลับแท็บไม่ได้ ก็กางทุกตารางเรียงลงมาให้อ่านครบแทน */
+#pricing .tabs,.cl-tabs{display:none}
+#pricing .panel,.cl-panel{display:block!important}
+#pricing .panel[data-label]::before,.cl-panel[data-label]::before{
+  content:attr(data-label);display:block;margin:26px 0 12px;
+  font-size:1rem;font-weight:600;color:var(--brown-dk);letter-spacing:.02em}
+</style>
+</noscript>
 </head>
 <body>
 
@@ -792,7 +807,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
     </div>
 <!--/ZS:BANNER-->
 <!--ZS:TABLES-->
-    <div class="panel on" id="p-condo">
+    <div class="panel on" id="p-condo" data-label="คอนโด">
       <div class="tbl-wrap rv">
         <table>
           <thead><tr><th>ขนาดพื้นที่</th><th>ตรวจครั้งที่ 1</th><th>ตรวจครั้งที่ 2</th></tr></thead>
@@ -808,7 +823,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
         </table>
       </div>
     </div>
-    <div class="panel" id="p-town">
+    <div class="panel" id="p-town" data-label="ทาวน์โฮม">
       <div class="tbl-wrap">
         <table>
           <thead><tr><th>ขนาดพื้นที่</th><th>ตรวจครั้งที่ 1</th><th>ตรวจครั้งที่ 2</th></tr></thead>
@@ -823,7 +838,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
         </table>
       </div>
     </div>
-    <div class="panel" id="p-house">
+    <div class="panel" id="p-house" data-label="บ้าน">
       <div class="tbl-wrap">
         <table>
           <thead><tr><th>ขนาดพื้นที่ (เดี่ยว, แฝด, สร้างเอง)</th><th>ตรวจครั้งที่ 1</th><th>ตรวจครั้งที่ 2</th></tr></thead>
@@ -929,7 +944,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
       <button class="tab" data-c="cl-condo">คอนโด <b>30</b></button>
     </div>
 
-    <div class="cl-panel on" id="cl-home">
+    <div class="cl-panel on" id="cl-home" data-label="บ้าน ทาวน์โฮม">
       <div class="cl-grid">
         <div class="cl-card rv-s">
           <div class="cl-cat"><span class="cl-ico">{{I:house}}</span> งานโครงสร้าง</div>
@@ -990,7 +1005,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
       </div>
     </div>
 
-    <div class="cl-panel" id="cl-condo">
+    <div class="cl-panel" id="cl-condo" data-label="คอนโด">
       <div class="cl-grid">
         <div class="cl-card rv-s">
           <div class="cl-cat"><span class="cl-ico">{{I:house}}</span> งานโครงสร้าง</div>
