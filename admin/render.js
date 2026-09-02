@@ -22,10 +22,18 @@ function cell(c) {
   return '<td>' + out + '</td>';
 }
 
+// วันสุดท้ายที่โปรใช้ได้ (ค.ศ. ปี-เดือน-วัน) นับตามเวลาไทย ว่างได้ถ้าโปรไม่มีวันหมด
+export function promoExpired(d, now = Date.now()) {
+  const u = d.promo && d.promo.until;
+  if (!u || !/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(u)) return false;
+  return now > Date.parse(u + 'T23:59:59+07:00');
+}
+
 export function renderPromo(d) {
   const p = d.promo;
   if (!p || !p.enabled || !p.text.trim()) return '';
-  return '      <span class="promo-pill">' + esc(p.text) + '</span>' + NL;
+  const until = p.until && /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(p.until) ? ' data-until="' + p.until + '"' : '';
+  return '      <span class="promo-pill"' + until + '>' + esc(p.text) + '</span>' + NL;
 }
 
 export function renderTabs(d) {

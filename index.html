@@ -1317,7 +1317,6 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
   <div class="wrap">
     <div class="sec-head rv">
 <!--ZS:PROMO-->
-      <span class="promo-pill">เฉพาะเดือนสิงหาคม 2026 เท่านั้น</span>
 <!--/ZS:PROMO-->
       <span class="sec-tag">Pricing</span>
       <h2 class="sec-title">ค่า<em>บริการ</em></h2>
@@ -1972,6 +1971,12 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
 </div>
 
 <script>
+// promo pill — hide itself after the last valid day (Thai time) even if nobody turned it off
+(function(){
+  document.querySelectorAll('.promo-pill[data-until]').forEach(function(p){
+    if(Date.now()>Date.parse(p.getAttribute('data-until')+'T23:59:59+07:00')) p.remove();
+  });
+})();
 // preloader — dismiss on whichever comes first; never trap the page
 (function(){
   var hide=function(){var l=document.getElementById('loader'); if(l) l.classList.add('done');};

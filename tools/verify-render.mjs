@@ -1,11 +1,16 @@
 // พิสูจน์ว่าโค้ดสร้าง HTML จาก data/site.json แล้วได้ตรงกับไฟล์จริงทุกตัวอักษร
 // ถ้าไม่ตรง แปลว่าหน้า admin จะทำหน้าเว็บเพี้ยนตอนกดเผยแพร่ครั้งแรก
 import { readFileSync, writeFileSync } from 'node:fs';
-import { applyRegions } from '../admin/render.js';
+import { applyRegions, promoExpired } from '../admin/render.js';
 
 const data = JSON.parse(readFileSync('data/site.json', 'utf8'));
 const write = process.argv.includes('--write');
 let bad = 0;
+
+if (data.promo.enabled && promoExpired(data)) {
+  console.log(`FAIL  data/site.json: ป้ายโปรหมดอายุ ${data.promo.until} แล้วแต่ยังเปิดอยู่ ปิด enabled หรือเลื่อน until ก่อน`);
+  bad++;
+}
 
 for (const path of ['index.html', 'base.html']) {
   const cur = readFileSync(path, 'utf8');

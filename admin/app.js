@@ -1,4 +1,4 @@
-import { applyRegions, renderTables, renderNotes, renderBanner, renderPromo } from './render.js';
+import { applyRegions, renderTables, renderNotes, renderBanner, renderPromo, promoExpired } from './render.js';
 
 // คลังที่ Cloudflare Pages ใช้ build เว็บจริง แก้ตรงนี้ที่เดียวถ้าย้ายคลัง
 const REPO = { owner: 'zingstarengineering-stack', name: 'zingstar-engineering-site', branch: 'main' };
@@ -137,6 +137,7 @@ function setMsg(id, text, kind) {
 function buildAll() {
   $('promo-on').checked = !!data.promo.enabled;
   $('promo-text').value = data.promo.text;
+  $('promo-until').value = data.promo.until || '';
   $('banner-on').checked = !!data.banner.enabled;
   $('banner-lead').value = data.banner.lead;
   $('banner-rest').value = data.banner.rest;
@@ -304,6 +305,11 @@ function buildNotes() {
 function refresh() {
   data.promo.enabled = $('promo-on').checked;
   data.promo.text = $('promo-text').value;
+  data.promo.until = $('promo-until').value;
+  if (!data.promo.until) delete data.promo.until;
+  setMsg('promo-warn', data.promo.enabled && promoExpired(data)
+    ? 'โปรหมดอายุไปแล้วตั้งแต่ ' + data.promo.until + ' ป้ายไม่ขึ้นบนเว็บ ปิดสวิตช์หรือเลื่อนวันสุดท้ายออกไป'
+    : '', 'err');
   data.banner.enabled = $('banner-on').checked;
   data.banner.lead = $('banner-lead').value;
   data.banner.rest = $('banner-rest').value;
@@ -352,6 +358,9 @@ function diffSummary(a, b) {
     out.push(b.promo.enabled ? 'เปิดป้ายโปรโมชั่น' : 'ปิดป้ายโปรโมชั่น ป้ายจะหายจากเว็บ');
   }
   if (a.promo.text !== b.promo.text) out.push('แก้ข้อความป้ายโปรเป็น "' + b.promo.text + '"');
+  if ((a.promo.until || '') !== (b.promo.until || '')) {
+    out.push(b.promo.until ? 'ป้ายโปรใช้ได้ถึงวันที่ ' + b.promo.until : 'ป้ายโปรไม่มีวันหมด');
+  }
   if (a.banner.enabled !== b.banner.enabled) {
     out.push(b.banner.enabled ? 'เปิดแถบข้อความใต้ปุ่มเลือกประเภท' : 'ปิดแถบข้อความใต้ปุ่มเลือกประเภท');
   }
@@ -468,7 +477,7 @@ $('publish').addEventListener('click', publish);
 $('reload').addEventListener('click', reload);
 $('preview-refresh').addEventListener('click', refresh);
 $('note-add').addEventListener('click', () => { data.notes.push(''); buildNotes(); refresh(); });
-['promo-on', 'promo-text', 'banner-on', 'banner-lead', 'banner-rest']
+['promo-on', 'promo-text', 'promo-until', 'banner-on', 'banner-lead', 'banner-rest']
   .forEach((id) => $(id).addEventListener('input', refresh));
 $('promo-on').addEventListener('change', refresh);
 $('banner-on').addEventListener('change', refresh);

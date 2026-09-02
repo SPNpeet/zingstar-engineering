@@ -64,9 +64,16 @@
         <span>ข้อความบนป้ายแดงเหนือตาราง</span>
         <input type="text" id="promo-text" maxlength="120">
       </label>
+      <label class="fld">
+        <span>วันสุดท้ายที่โปรใช้ได้ (เว้นว่างถ้าไม่มีวันหมด)</span>
+        <input type="date" id="promo-until">
+      </label>
       <p class="note">
         ปิดสวิตช์เมื่อโปรหมด ป้ายจะหายไปจากเว็บทันทีโดยที่ราคาในตารางยังอยู่เหมือนเดิม
+        ถ้าใส่วันสุดท้ายไว้ ป้ายจะซ่อนตัวเองหลังเที่ยงคืนของวันนั้นแม้ลืมมาปิด
+        ส่วนราคาในตารางไม่เปลี่ยนเอง ต้องมาแก้ที่นี่
       </p>
+      <p id="promo-warn" class="msg err" role="status"></p>
     </section>
 
     <section class="card">
