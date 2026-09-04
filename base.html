@@ -1629,6 +1629,16 @@ addEventListener('scroll',()=>{const y=scrollY;
     if(Math.abs(dx)>50)step(dx>0?-1:1);x0=null;
   },{passive:true});
 })();
+// contact clicks — one event per tap on LINE or the phone number, so GA4 and Ads can count leads
+document.addEventListener('click',function(e){
+  var a=e.target.closest?e.target.closest('a[href]'):null;
+  if(!a||typeof gtag!=='function')return;
+  var h=a.getAttribute('href')||'';
+  var m=h.indexOf('tel:')===0?'phone':h.indexOf('lin.ee')>-1?'line':'';
+  if(!m)return;
+  var s=a.closest('[id]');
+  gtag('event','contact_click',{method:m,section:s?s.id:'page'});
+});
 </script>
 </body>
 </html>

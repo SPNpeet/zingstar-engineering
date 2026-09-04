@@ -1,0 +1,44 @@
+# Zing Star Inspector
+
+> บริการตรวจบ้าน ตรวจคอนโด ตรวจทาวน์โฮม ก่อนโอนกรรมสิทธิ์ โดยวิศวกรมีใบประกอบวิชาชีพ (ใบ กว.)
+> ดำเนินงานโดย บริษัท ซิง สตาร์ เอนจิเนียริ่ง แอนด์ คอนสตรัคชั่น จำกัด (เลขทะเบียนนิติบุคคล 0125567025733)
+> ให้บริการกรุงเทพฯ ปริมณฑล และต่างจังหวัด (บางจังหวัดมีค่าเดินทางเพิ่ม)
+
+Zing Star Inspector is a Thai home and condominium pre-handover inspection company.
+Licensed engineers inspect houses, townhomes and condos before the buyer accepts transfer,
+then deliver an illustrated defect report within 48 hours that the buyer hands to the developer for repair.
+
+## บริการ (Services)
+
+- ตรวจบ้านเดี่ยว บ้านแฝด บ้านสร้างเอง ก่อนโอน พร้อมบินโดรนสำรวจหลังคาฟรี
+- ตรวจทาวน์โฮม ก่อนโอน พร้อมบินโดรนสำรวจหลังคาฟรี
+- ตรวจคอนโดมิเนียม ก่อนโอน
+- ตรวจโครงสร้าง ตรวจระหว่างก่อสร้าง ตรวจงานรีโนเวท
+- ตรวจครั้งที่ 2 (ตรวจซ้ำหลังโครงการแก้ไข) เป็นทางเลือก ไม่บังคับ
+
+## จุดที่ลูกค้าถามบ่อย (Key facts)
+
+- ตรวจโดยวิศวกรมีใบประกอบวิชาชีพทุกงาน ทีมทาวน์โฮมและบ้านเข้าตรวจขั้นต่ำ 3 คน
+- ไม่เก็บมัดจำจองคิว ชำระเงินหน้างานหลังตรวจเสร็จ
+- ค่าเดินทางฟรีในเขตให้บริการหลัก
+- ส่งรายงานตรวจพร้อมภาพประกอบภายใน 48 ชั่วโมง
+- ค่าบริการคิดตามประเภทและขนาดพื้นที่ (ตร.ม.) ดูตารางล่าสุดที่ https://zingstarengineering.com/#pricing
+- ผลงานที่ผ่านมามากกว่า 20,000 ยูนิต
+
+## ติดต่อ (Contact)
+
+- เว็บไซต์: https://zingstarengineering.com/
+- โทร: 096-541-5436, 094-614-9958 (รับสาย 24 ชั่วโมง)
+- LINE: https://lin.ee/14aW2hy
+- อีเมล: zings.inspector@gmail.com
+- Facebook: https://www.facebook.com/share/1BWRSAGYHn/
+- Instagram: https://www.instagram.com/zingstar__inspector
+- TikTok: https://www.tiktok.com/@zing.star.inspect
+- ที่อยู่บริษัท: 24/4 หมู่ 6 ต.ขุนศรี อ.ไทรน้อย จ.นนทบุรี 11150
+
+## หน้าในเว็บ (Pages)
+
+- [หน้าแรก](https://zingstarengineering.com/): บริการ ค่าบริการ ผลงาน รีวิว ขั้นตอน คำถามที่พบบ่อย ติดต่อ
+- [ค่าบริการ](https://zingstarengineering.com/#pricing): ตารางราคาตามขนาดพื้นที่ แยกคอนโด ทาวน์โฮม บ้าน
+- [คำถามที่พบบ่อย](https://zingstarengineering.com/#faq)
+- [ตัวอย่างรายงาน](https://zingstarengineering.com/#report)
