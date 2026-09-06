@@ -2022,7 +2022,30 @@ addEventListener('scroll',()=>{
 const io=new IntersectionObserver(es=>{
   es.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'), i*80); io.unobserve(e.target);} });
 },{threshold:.12,rootMargin:'0px 0px -50px'});
-document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-s').forEach(el=>io.observe(el));
+const rvWaiting=[...document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-s')];
+rvWaiting.forEach(el=>io.observe(el));
+
+/* กระโดดข้ามด้วยลิงก์ #pricing หรือปัดเร็ว ๆ ทำให้บล็อกไหลพ้นจอโดยที่ตัวสังเกตไม่ทันเห็น
+   บล็อกนั้นค้าง opacity:0 ถาวร ทั้งตารางราคาและหัวข้อหมวด ด่านนี้กวาดซ้ำทุกครั้งที่เลื่อน
+   ของที่ขึ้นมาถึงครึ่งจอแล้วให้แสดงทันที ไม่ต้องรอเอฟเฟกต์ */
+let rvQueued=false;
+const rvSweep=()=>{
+  rvQueued=false;
+  const half=innerHeight*.5;
+  for(let i=rvWaiting.length-1;i>=0;i--){
+    const el=rvWaiting[i];
+    if(el.classList.contains('in')||el.getBoundingClientRect().top<half){
+      el.classList.add('in'); io.unobserve(el); rvWaiting.splice(i,1);
+    }
+  }
+  if(!rvWaiting.length){removeEventListener('scroll',rvOnScroll);removeEventListener('resize',rvOnScroll);removeEventListener('hashchange',rvSweep)}
+};
+const rvOnScroll=()=>{ if(!rvQueued){rvQueued=true;requestAnimationFrame(rvSweep)} };
+addEventListener('scroll',rvOnScroll,{passive:true});
+addEventListener('resize',rvOnScroll,{passive:true});
+addEventListener('hashchange',rvSweep);
+addEventListener('load',rvSweep);
+rvSweep();
 
 // count-up
 const cio=new IntersectionObserver(es=>{
