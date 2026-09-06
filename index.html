@@ -24,9 +24,9 @@
 <meta name="theme-color" content="#C8A24A">
 <link rel="icon" href="img/logo.jpg">
 <link rel="apple-touch-icon" href="img/logo.jpg">
-<!-- hero.jpg เป็นรูปสำหรับแชร์ลิงก์เท่านั้น หน้าเว็บไม่เคยวาดมันเลย
-     พื้นหลังหัวเว็บที่คนเห็นจริงคือ team.jpg ใน .hero-bg -->
-<link rel="preload" as="image" href="img/team.jpg" fetchpriority="high">
+<!-- ไม่ preload รูปหัวเว็บแล้ว hero.jpg เป็นรูปสำหรับแชร์ลิงก์อย่างเดียว หน้าเว็บไม่เคยวาด
+     ส่วน team.jpg เป็นพื้นหลังที่ถูกม่านครีมทับไว้เกือบทึบ ไม่คุ้มที่จะแย่งคิว
+     รูปที่คนเห็นเป็นชิ้นใหญ่ที่สุดคือโลโก้ จึงเร่งที่แท็ก img ของโลโก้โดยตรง -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
@@ -885,7 +885,7 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
 <a class="skip" href="#services">ข้ามไปที่เนื้อหาหลัก</a>
 
 <div id="loader">
-  <img class="loader-logo" src="img/logo.jpg" alt="Zing Star Inspector" width="946" height="946">
+  <img class="loader-logo" src="img/logo.jpg" alt="Zing Star Inspector" width="946" height="946" fetchpriority="high">
 </div>
 
 <div id="progress"></div>
