@@ -610,6 +610,9 @@ footer{background:var(--brown-dk);color:var(--cream);padding:54px 0 28px;positio
 .ft-col a:hover{color:var(--yellow);transform:translateX(4px)}
 .ft-bot{border-top:1px solid rgba(250,243,227,.14);padding-top:20px;display:flex;justify-content:space-between;
   gap:12px;flex-wrap:wrap;font-size:.72rem;color:rgba(250,243,227,.5)}
+/* ลิงก์ในแถบล่างสุดสูงแค่ 20px เตี้ยกว่าที่นิ้วกดติด ขยายพื้นที่กดโดยไม่ดันแถบให้สูงขึ้น */
+.ft-bot a{display:inline-flex;align-items:center;min-height:44px;color:inherit}
+.ft-bot a:hover{color:var(--yellow)}
 
 /* ===== floats ===== */
 .floats{position:fixed;right:16px;bottom:16px;z-index:180;display:flex;flex-direction:column;gap:10px}
@@ -1571,10 +1574,12 @@ rvWaiting.forEach(el=>io.observe(el));
 let rvQueued=false;
 const rvSweep=()=>{
   rvQueued=false;
-  const half=innerHeight*.5;
+  // บล็อกสูงกว่าจอ เช่นแกลเลอรีผลงาน 1,894px จะโผล่แค่ส่วนบนแล้วตัวสังเกตยังไม่ยิง
+  // ใช้เส้นที่ขอบล่างของจอแทนครึ่งจอ ของที่โผล่มาแล้วต้องเห็นเสมอ
+  const line=innerHeight-60;
   for(let i=rvWaiting.length-1;i>=0;i--){
     const el=rvWaiting[i];
-    if(el.classList.contains('in')||el.getBoundingClientRect().top<half){
+    if(el.classList.contains('in')||el.getBoundingClientRect().top<line){
       el.classList.add('in'); io.unobserve(el); rvWaiting.splice(i,1);
     }
   }
