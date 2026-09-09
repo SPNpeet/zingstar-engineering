@@ -49,6 +49,7 @@ address{font-style:normal}
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-CSRMK1EQC5');
+  gtag('config', 'AW-18429192825');
 </script>
 </head>
 <body>
@@ -113,5 +114,16 @@ address{font-style:normal}
 
   <a class="back" href="/">กลับหน้าแรก</a>
 </main>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest?e.target.closest('a[href]'):null;
+  if(!a||typeof gtag!=='function')return;
+  var h=a.getAttribute('href')||'';
+  var m=h.indexOf('tel:')===0?'phone':h.indexOf('lin.ee')>-1?'line':'';
+  if(!m)return;
+  gtag('event','contact_click',{method:m,section:'privacy'});
+  gtag('event','conversion',{send_to:'AW-18429192825/AQrBCI68j_AcEPnU3NNE',value:1,currency:'THB'});
+});
+</script>
 </body>
 </html>
