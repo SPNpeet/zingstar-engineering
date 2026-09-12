@@ -39,6 +39,10 @@ then deliver an illustrated defect report within 48 hours that the buyer hands t
 ## หน้าในเว็บ (Pages)
 
 - [หน้าแรก](https://zingstarengineering.com/): บริการ ค่าบริการ ผลงาน รีวิว ขั้นตอน คำถามที่พบบ่อย ติดต่อ
+- [ตรวจบ้านก่อนโอน](https://zingstarengineering.com/house-inspection): บ้านเดี่ยว บ้านแฝด บ้านสร้างเอง ราคาตามขนาด รายการตรวจ 36 จุด
+- [ตรวจทาวน์โฮมก่อนโอน](https://zingstarengineering.com/townhome-inspection): ทาวน์โฮม ทาวน์เฮ้าส์ ราคาตามขนาด จุดที่มักมีปัญหา
+- [ตรวจคอนโดก่อนโอน](https://zingstarengineering.com/condo-inspection): ห้องชุดทุกขนาด ราคาตามขนาด รายการตรวจ 30 จุด
+- [เช็กลิสต์ตรวจบ้านก่อนโอน](https://zingstarengineering.com/checklist): รายการตรวจเต็ม บ้าน 36 จุด คอนโด 30 จุด และการเตรียมตัววันตรวจ
 - [ค่าบริการ](https://zingstarengineering.com/#pricing): ตารางราคาตามขนาดพื้นที่ แยกคอนโด ทาวน์โฮม บ้าน
 - [คำถามที่พบบ่อย](https://zingstarengineering.com/#faq)
 - [ตัวอย่างรายงาน](https://zingstarengineering.com/#report)
